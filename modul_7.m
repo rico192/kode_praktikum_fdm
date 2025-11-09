@@ -45,14 +45,14 @@ variasi = ['I   '; 'II  '; 'III '; 'IV  '];
 
 % Tabel untuk Katup Kapiler
 fprintf('\n\nTabel Hasil Perhitungan Katup Kapiler\n');
-fprintf('==================================================================\n');
-fprintf('Variasi | v (m/s) | delta_h (kJ/kg) | m_dot (kg/s) | Q (Watt)\n');
-fprintf('------------------------------------------------------------------\n');
+fprintf('=====================================================================================\n');
+fprintf('Variasi | v (m/s) | delta_h (kJ/kg) | delta_w (kg/kg) | m_dot (kg/s) | Q (Watt)\n');
+fprintf('-------------------------------------------------------------------------------------\n');
 for j = 1:4
-    fprintf('%s    | %-7.2f | %-15.2f | %-12.4f | %-8.2f\n', ...
-            variasi(j,:), data(1).v(j), data(1).delta_h(j), data(1).m_dot(j), data(1).Q(j));
+    fprintf('%s    | %-7.2f | %-15.2f | %-12.4f | %-12.4f | %-8.2f\n', ...
+            variasi(j,:), data(1).v(j), data(1).delta_h(j), data(1).delta_w(j), data(1).m_dot(j), data(1).Q(j));
 end
-fprintf('==================================================================\n');
+fprintf('=====================================================================================\n');
 
 % Tabel untuk Katup Ekspansi
 fprintf('\n\nTabel Hasil Perhitungan Katup Ekspansi\n');
@@ -103,4 +103,5 @@ xlabel('Laju Aliran Massa (kg/s)');
 ylabel('Penurunan Entalpi (kJ/kg)');
 legend('show');
 grid on;
+
 
