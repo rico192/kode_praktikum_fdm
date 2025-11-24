@@ -32,7 +32,7 @@ K = (3 * E_baja * I) ./ (L_d2.^3);
 omega_motor_d2 = 2 * pi * f_motor_d2; % rad/s
 omega_absorber_d2 = 2 * pi * f_absorber_d2; % rad/s
 omega_s = omega_motor_d2 - omega_absorber_d2;
-f_s = omega_s ./ 2 * pi; % Hz
+f_s = omega_s ./ (2 * pi); % Hz
 A = f_s ./ abs(K - m .* omega_s.^2);
 
 fprintf('\nData 2\n');
