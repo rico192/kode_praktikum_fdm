@@ -7,14 +7,14 @@ n = [541 672 764 974];
 n_motor_d2 = 850; % rpm
 L_d2 = [0.160 0.140 0.110 0.090]; % m
 m = 0.15; % kg
-f_motor_d2 = 14.61; % Hz
+f_motor_d2 = 14.17; % Hz
 
 % konstanta
 E_baja = 2.1e11; % N/m2
 I = 0.012 * 0.001^3 / 12; % m4
 
 % kalkulasi data 1
-f_absorber_d1 = (1/(2*pi)) * sqrt((2 * E_baja * I) ./ (m * L.^3));
+f_absorber_d1 = (1/(2*pi)) * sqrt((3 * E_baja * I) ./ (m * L.^3));
 f_motor_d1 = n ./ 60; % Hz
 
 fprintf('\nData 1\n');
@@ -27,7 +27,7 @@ end
 fprintf('================================================================\n\n');
 
 % kalkulasi data 2
-f_absorber_d2 = (1/(2*pi)) * sqrt((2 * E_baja * I) ./ (m * L_d2.^3));
+f_absorber_d2 = (1/(2*pi)) * sqrt((3 * E_baja * I) ./ (m * L_d2.^3));
 K = (3 * E_baja * I) ./ (L_d2.^3);
 omega_motor_d2 = 2 * pi * f_motor_d2; % rad/s
 omega_absorber_d2 = 2 * pi * f_absorber_d2; % rad/s
